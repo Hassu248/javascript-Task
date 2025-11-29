@@ -11,20 +11,23 @@ function countEven(arr){
     return count;
 }
 var result = countEven(arr)
-document.writeln("Total Even Numbers is "+result)
+document.writeln("Total Even Numbers is "+result+"<br>")
 
 
 
 
 // Task 2
 
-var array = [1,2,3,2,5,4,1,7];
-function removeDuplicate(array){
-return array.filter((item, index) => array.indexOf(item) === index);
+var arr = [1,2,3,4,3,2,1,1,1,3,4,5,6,7,8,6,5,5];
+for(var i=0;i<arr.length;i++){
+    for(var j=i+1;j<arr.length;j++){
+        if(arr[i]==arr[j]){
+            arr.splice(j,1) 
+            j--
+        }
+    }
 }
-var uniqueArr = removeDuplicate(array)
-document.writeln("(Your Array is "+array+") and removed duplicate number = "+uniqueArr)
-
+document.writeln("Your array is "+arr+"<br>")
 
 
 
@@ -45,4 +48,11 @@ function countRatings(ratings) {
 
 var result = countRatings(ratings);
 
-document.writeln("5-star ratings = ", result);
+document.writeln("5-star ratings = ", result+"<br>");
+
+
+
+
+
+
+
